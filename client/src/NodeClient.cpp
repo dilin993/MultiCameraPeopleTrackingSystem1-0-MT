@@ -17,6 +17,9 @@ detector()
 {
     frameNo = 0;
 
+    cap.set(CV_CAP_PROP_FRAME_WIDTH,width);
+    cap.set(CV_CAP_PROP_FRAME_HEIGHT,height);
+
     boost::asio::ip::tcp::resolver resolver(io_service);
     tcp::resolver::query query(ip, to_string(port));
     boost::asio::ip::tcp::resolver::iterator endpoint_iterator =

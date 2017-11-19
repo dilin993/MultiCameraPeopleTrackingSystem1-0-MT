@@ -51,7 +51,7 @@ void DataAssociation::assignTracks(vector<Point2f> detections,
                     min_e = e;
                 row.push_back(e);
             }
-//            cout << "min_e = " << min_e << endl;
+            cout << "min_e = " << min_e << endl;
             if (min_e > TRACK_INIT_TH) // initialize new track
             {
                 ParticleFilterTracker tr(detections[i],histograms[i],
